@@ -28,3 +28,6 @@ jobs:
       - name: Run lint
         run: flake8
 
+      - name: Build Docker image
+        run: docker build -t myapp
+
