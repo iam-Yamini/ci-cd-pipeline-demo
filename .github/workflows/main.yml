@@ -25,9 +25,9 @@ jobs:
     - name: Run tests
       run: python -m pytest
 
-      - name: Run lint
+    - name: Run lint
         run: flake8
 
-      - name: Build Docker image
-        run: docker build -t myapp
+    - name: Build Docker image
+      run: docker build -t myapp
 
