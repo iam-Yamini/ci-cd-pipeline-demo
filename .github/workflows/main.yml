@@ -29,5 +29,5 @@ jobs:
       run: flake8
 
     - name: Build Docker image
-      run: docker build -t myapp
+      run: docker build -t myapp .
 
