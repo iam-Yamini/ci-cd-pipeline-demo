@@ -1,0 +1,69 @@
+# CI/CD Pipeline Demo
+
+This is a beginner-friendly demo project to showcase a basic CI/CD pipeline using **GitHub Actions**, **Python**, **pytest**, **flake8**, and **Docker**.
+
+It’s designed as a portfolio project to demonstrate:
+- Automated testing on code push
+- Code linting for style and quality
+- Building a Docker container image
+
+---
+
+## 🔧 Project Setup
+
+- Python app (`app.py`) with a simple `add()` function
+- Unit test (`tests/test_app.py`) using `pytest`
+
+---
+
+## 🚀 CI/CD Workflow
+
+This project uses **GitHub Actions** to run the following steps on every push to the `main` branch:
+
+1. **Checkout code**
+2. **Set up Python**
+3. **Install dependencies**
+4. **Run lint checks (flake8)**
+5. **Run unit tests (pytest)**
+6. **Build Docker image**
+
+The workflow file is located at: 
+.github/workflows/main.yml
+
+---
+
+## 🐳 Dockerfile
+
+A simple Dockerfile is included to:
+- Install dependencies
+- Copy the app code
+- Run tests inside the container
+
+---
+
+## 📦 Requirements
+pytest
+flake8
+---
+
+## 💥 How to trigger the pipeline
+
+1. Make any change to the code (for example, add a comment in `app.py`)
+2. Commit and push to the `main` branch
+3. Go to the **Actions** tab → watch the pipeline run
+
+---
+
+## ✅ Example commands (local, optional)
+
+If you want to run locally (optional if you only use GitHub):
+
+```bash
+# Run tests
+pytest
+
+# Check linting
+flake8 .
+
+# Build Docker image
+docker build -t myapp .
