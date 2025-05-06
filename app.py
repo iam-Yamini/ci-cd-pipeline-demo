@@ -1,3 +1,4 @@
+# Triggering the CI/CD pipeline
 def add(a, b):
     return a + b
 
